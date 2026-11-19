@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#64113d">
+<title>Happy Birthday My Queen 🎂</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;padding:22px 12px 35px;text-align:center;color:#fff;font-family:Georgia,serif;background:radial-gradient(circle at top,#b83d78,#64113d 55%,#270b25);overflow-x:hidden}
+.container{max-width:470px;margin:18px auto;padding:28px 17px;border:1px solid #ffffff50;border-radius:25px;background:#ffffff12;box-shadow:0 20px 60px #0007}
+.small{letter-spacing:3px;font:11px Arial,sans-serif;color:#ffd3e5}
+h1{font-size:clamp(34px,9vw,43px);color:#fff2f7;text-shadow:0 4px 20px #ff6eaa;margin:15px 0 8px}
+.subtitle,.instruction{color:#ffe0ed;font:14px Arial,sans-serif}
+.cake-area{height:225px;display:flex;align-items:center;justify-content:center}
+.cake{position:relative;width:210px;height:175px;animation:rotate 5s ease-in-out infinite}
+@keyframes rotate{0%,100%{transform:rotateY(-20deg) rotateZ(-2deg)}50%{transform:rotateY(20deg) rotateZ(2deg)}}
+.plate{position:absolute;bottom:8px;width:210px;height:22px;border-radius:50%;background:linear-gradient(white,#ef8db8)}
+.bottom{position:absolute;bottom:30px;left:20px;width:170px;height:70px;border-radius:15px 15px 20px 20px;background:linear-gradient(90deg,#df397b,#fff0f5,#e75a96)}
+.top{position:absolute;bottom:88px;left:40px;width:130px;height:48px;border-radius:50% 50% 12px 12px;background:linear-gradient(90deg,#ff9ec5,#fff,#f47eae)}
+.icing{position:absolute;bottom:119px;left:40px;width:130px;height:18px;border-radius:50%;background:white}
+.drip{position:absolute;bottom:103px;left:55px;width:12px;height:24px;background:white;border-radius:0 0 10px 10px;box-shadow:35px 5px white,70px -2px white,100px 5px white}
+.candle{position:absolute;bottom:137px;left:100px;width:10px;height:42px;border-radius:4px;background:repeating-linear-gradient(45deg,white 0 6px,#ff5595 6px 12px)}
+.flame{position:absolute;bottom:175px;left:98px;width:15px;height:22px;border-radius:50%;background:radial-gradient(#fff7a0,orange,#ff4d30);filter:drop-shadow(0 0 12px orange);animation:flicker .5s infinite alternate}
+@keyframes flicker{to{transform:scale(.8) rotate(8deg)}}
+.heart{position:fixed;bottom:-30px;color:#ff9bc8;animation:float 10s linear infinite;pointer-events:none}
+@keyframes float{to{transform:translateY(-110vh) rotate(40deg);opacity:0}}
+#surprises{display:none;margin-top:28px}
+#surprises.show{display:block;animation:appear .7s ease}
+@keyframes appear{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+.section-title{font-size:23px;color:#ffe7f0;margin:12px 0 7px}
+.section-note{font:13px Arial,sans-serif;color:#ffd6e7;margin:0 0 18px}
+.envelope-card{margin:18px auto;padding:17px 12px 20px;max-width:360px;border:1px solid #ffffff35;border-radius:19px;background:#ffffff0c}
+.envelope-card h3{font-size:17px;margin:5px 0 12px;color:#fff0f6}
+.envelope-button{border:0;background:transparent;cursor:pointer;color:white;padding:0}
+.envelope{position:relative;width:190px;height:115px;margin:8px auto 12px;filter:drop-shadow(0 8px 10px #0006)}
+.env-body{position:absolute;inset:15px 0 0;background:#ffd4e5;border-radius:8px}
+.env-flap{position:absolute;top:15px;left:0;border-left:95px solid transparent;border-right:95px solid transparent;border-top:65px solid #ff9fc5;transform-origin:top;transition:transform .8s;z-index:3}
+.env-front{position:absolute;inset:15px 0 0;background:linear-gradient(35deg,#e85b92,#ffb6d1);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);border-radius:8px;z-index:4}
+.seal{position:absolute;top:57px;left:78px;width:34px;height:34px;border-radius:50%;background:#a91e58;display:grid;place-items:center;z-index:5}
+.envelope-button.open .env-flap{transform:rotateX(180deg);z-index:1}
+.envelope-button.open .seal{opacity:0}
+.tap-label{font:11px Arial,sans-serif;letter-spacing:1px;color:#ffe4ef}
+.letter{display:none;margin:18px auto 0;padding:19px 16px;max-width:330px;background:#fff5f8;color:#7c2049;border-radius:15px;line-height:1.8;text-align:left;animation:appear .7s ease}
+.letter.show{display:block}
+.letter h4{text-align:center;color:#b32965;font-size:21px;margin:0 0 12px}
+.letter p{font-size:14px;margin:9px 0}
+.signature{text-align:right;font-style:italic;color:#b32965}
+.envelope-card.locked{opacity:.48}
+.envelope-card.locked .envelope-button{pointer-events:none}
+.envelope-card.done{border-color:#ffb6d1;background:#ffffff18}
+.footer{margin-top:25px;color:#f5b6d0;font:10px Arial,sans-serif;letter-spacing:2px}
+</style>
+</head>
+<body>
+
+<div class="container">
+<div class="small">A SPECIAL DAY FOR SOMEONE SPECIAL</div>
+<h1>Happy Birthday<br>My Queen 🎂</h1>
+<p class="subtitle">Maanta waa maalintaada gaarka ah ✨</p>
+
+<div class="cake-area">
+<div class="cake">
+<div class="plate"></div>
+<div class="bottom"></div>
+<div class="top"></div>
+<div class="icing"></div>
+<div class="drip"></div>
+<div class="candle"></div>
+<div class="flame"></div>
+</div>
+</div>
+
+<p class="instruction">Samee hammi, dabadeed fur hadiyaddaada 💗</p>
+
+<button class="envelope-button" id="mainOpen">
+<div class="envelope">
+<div class="env-body"></div>
+<div class="env-flap"></div>
+<div class="env-front"></div>
+<div class="seal">♥</div>
+</div>
+<span class="tap-label" id="mainLabel">TAABO SI AAD U FURTO 💌</span>
+</button>
+
+<section id="surprises">
+<h2 class="section-title">Saddex Hadiyadood oo Gaar ah 💝</h2>
+<p class="section-note">Mid mid u fur bashqadaha, mid walbana wax gaar ah ayuu kuu sidaa.</p>
+
+<div class="envelope-card" id="card1">
+<h3>1. Geeraar Gaar ah 🌹</h3>
+<button class="envelope-button" data-letter="letter1" data-card="card1">
+<div class="envelope">
+<div class="env-body"></div><div class="env-flap"></div>
+<div class="env-front"></div><div class="seal">🌹</div>
+</div>
+<span class="tap-label">FUR BASHQADDA KOOWAAD</span>
+</button>
+<div class="letter" id="letter1">
+<h4>Ubaxii Maanta 🌹</h4>
+<p>
+Dayax soo baxay baad tahay, habeenkii nuurkiisa,<br>
+Ubax aan engegin baad tahay, beerta dhexdeedii,<br>
+Farxad baad ku beeraysaa, qalbiga qof ku xusuusta,<br>
+Maalintaad dhalatay maanta, ha kuu noqoto mid barwaaqo ah.
+</p>
+<p>Sanad walba farxad ku noolow, riyooyinkaaguna rumoobaan. ❤️</p>
+</div>
+</div>
+
+<div class="envelope-card locked" id="card2">
+<h3>2. Fariin Kuu Gaar ah 💌</h3>
+<button class="envelope-button" data-letter="letter2" data-card="card2" disabled>
+<div class="envelope">
+<div class="env-body"></div><div class="env-flap"></div>
+<div class="env-front"></div><div class="seal">💗</div>
+</div>
+<span class="tap-label">MARKA KOOWAAD FUR BASHQADDA 1</span>
+</button>
+<div class="letter" id="letter2">
+<h4>Erayo Qalbi Ka Yimid 💖</h4>
+<p>Maanta waxaan kuu rajaynayaa farxad aan dhammaan, caafimaad, nabad iyo guulo badan.</p>
+<p>Joogitaankaaga iyo qosolkaagu waxay maalmaha ka dhigaan kuwo ka qurux badan. Ilaahay ha kuu fududeeyo wax kasta oo wanaagsan oo aad hiigsanayso.</p>
+<p>Dhalasho farxad leh, qof qaali ah. 🌷</p>
+<p class="signature">Farriin si gaar ah adiga laguugu qoray ❤️</p>
+</div>
+</div>
+
+<div class="envelope-card locked" id="card3">
+<h3>3. Fariin Funny ah 😅</h3>
+<button class="envelope-button" data-letter="letter3" data-card="card3" disabled>
+<div class="envelope">
+<div class="env-body"></div><div class="env-flap"></div>
+<div class="env-front"></div><div class="seal">😂</div>
+</div>
+<span class="tap-label">MARKA XIGTA FUR BASHQADDA 2</span>
+</button>
+<div class="letter" id="letter3">
+<h4>War Maanta Waa Maalintaada! 😂🎂</h4>
+<p>Hambalyo! Maanta waxaad xaq u leedahay cake, hadiyado iyo in qof walba kuu adeego. 😅</p>
+<p>Laakiin digniin: shumacyada cake-ga ha wada damin hal mar, korontada xaafadda ayaa kaa baqi karta! 😂</p>
+<p>Haddii cake-gu kaa dhammaado, anigu waxba kama ogi… sawirkiisa keliya ayaan kuu reebay! 🤣</p>
+<p>Happy Birthday, Queen! ❤️</p>
+</div>
+</div>
+</section>
+
+<div class="footer">MADE WITH LOVE • JUST FOR YOU</div>
+</div>
+
+<script>
+for(let i=0;i<24;i++){
+const h=document.createElement("span");
+h.className="heart";
+h.textContent="♥";
+h.style.left=Math.random()*100+"%";
+h.style.fontSize=(12+Math.random()*18)+"px";
+h.style.animationDuration=(8+Math.random()*9)+"s";
+h.style.animationDelay=(-Math.random()*15)+"s";
+document.body.appendChild(h);
+}
+
+document.getElementById("mainOpen").addEventListener("click",function(){
+this.classList.add("open");
+document.getElementById("mainLabel").textContent="HADIYADAHAAGA WAY KU SUGAYAAN ❤️";
+document.getElementById("surprises").classList.add("show");
+document.getElementById("surprises").scrollIntoView({behavior:"smooth",block:"start"});
+});
+
+document.querySelectorAll("[data-letter]").forEach(button=>{
+button.addEventListener("click",function(){
+if(this.disabled)return;
+
+const letter=document.getElementById(this.dataset.letter);
+const card=document.getElementById(this.dataset.card);
+
+if(letter.classList.contains("show"))return;
+
+this.classList.add("open");
+letter.classList.add("show");
+card.classList.add("done");
+
+this.querySelector(".tap-label").textContent="BASHQADDAN WAA LA FURAY ❤️";
+
+const number=Number(this.dataset.letter.replace("letter",""));
+
+if(number<3){
+const next=document.getElementById("card"+(number+1));
+next.classList.remove("locked");
+
+const nextButton=next.querySelector("button");
+nextButton.disabled=false;
+next.querySelector(".tap-label").textContent="TAABO SI AAD U FURTO";
+}
+
+letter.scrollIntoView({behavior:"smooth",block:"center"});
+});
+});
+</script>
+
+</body>
+</html>
